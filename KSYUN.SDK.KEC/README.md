@@ -1,7 +1,7 @@
 # CSharp API SDK for namespace KSYUN.SDK.KEC classname KsyunKecClient 
 
 
-- Build date: 2019-06-12 10:46
+- Build date: 2019-06-12 11:15
 ## Installation
 
 Use .NET CLI

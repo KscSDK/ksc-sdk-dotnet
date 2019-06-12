@@ -91,7 +91,7 @@ using KSYUN.SDK.VPC.Model.DisassociateRemoteCidr.query;
 
 namespace KSYUN.SDK.VPC
 {
-    class KsyunVpcClient
+    public class KsyunVpcClient
     {
         public string baseurl;
         public string region;

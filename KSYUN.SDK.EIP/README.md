@@ -1,7 +1,7 @@
 # CSharp API SDK for namespace KSYUN.SDK.EIP classname KsyunEipClient 
 
 
-- Build date: 2019-06-12 10:46
+- Build date: 2019-06-12 11:14
 ## Installation
 
 Use .NET CLI

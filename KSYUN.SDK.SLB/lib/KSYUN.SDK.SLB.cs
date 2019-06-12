@@ -35,7 +35,7 @@ using KSYUN.SDK.SLB.Model.DisassociateLoadBalancerAcl.query;
 
 namespace KSYUN.SDK.SLB
 {
-    class KsyunSlbClient
+    public class KsyunSlbClient
     {
         public string baseurl;
         public string region;

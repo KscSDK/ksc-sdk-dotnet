@@ -16,7 +16,7 @@ using KSYUN.SDK.KCM.Model.ModifyCertificate.query;
 
 namespace KSYUN.SDK.KCM
 {
-    class KsyunKcmClient
+    public class KsyunKcmClient
     {
         public string baseurl;
         public string region;

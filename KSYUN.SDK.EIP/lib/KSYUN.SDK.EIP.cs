@@ -19,7 +19,7 @@ using KSYUN.SDK.EIP.Model.ModifyAddress.query;
 
 namespace KSYUN.SDK.EIP
 {
-    class KsyunEipClient
+    public class KsyunEipClient
     {
         public string baseurl;
         public string region;

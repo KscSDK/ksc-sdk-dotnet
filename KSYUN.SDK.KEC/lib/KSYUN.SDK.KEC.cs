@@ -45,7 +45,7 @@ using KSYUN.SDK.KEC.Model.DescribeAvailabilityZones.query;
 
 namespace KSYUN.SDK.KEC
 {
-    class KsyunKecClient
+    public class KsyunKecClient
     {
         public string baseurl;
         public string region;
