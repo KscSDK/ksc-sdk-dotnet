@@ -1,7 +1,7 @@
 # CSharp API SDK for namespace KSYUN.SDK.EIP classname KsyunEipClient 
 
 
-- Build date: 2019-06-12 11:14
+- Build date: 2019-06-12 11:48
 ## Installation
 
 Use .NET CLI
@@ -47,7 +47,7 @@ Class Test {
         string _ak = "xxx";
         string _sk = "xxx";
 
-        Client client = new Client(
+        KsyunEipClient client = new KsyunEipClient(
         _region,
         _protocol,
         _ak,
@@ -93,7 +93,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunEipClient client = new KsyunEipClient(
         _region,
         _protocol,
         _ak,
@@ -181,7 +181,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunEipClient client = new KsyunEipClient(
         _region,
         _protocol,
         _ak,
@@ -312,7 +312,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunEipClient client = new KsyunEipClient(
         _region,
         _protocol,
         _ak,
@@ -447,7 +447,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunEipClient client = new KsyunEipClient(
         _region,
         _protocol,
         _ak,
@@ -567,7 +567,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunEipClient client = new KsyunEipClient(
         _region,
         _protocol,
         _ak,
@@ -696,7 +696,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunEipClient client = new KsyunEipClient(
         _region,
         _protocol,
         _ak,
@@ -796,7 +796,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunEipClient client = new KsyunEipClient(
         _region,
         _protocol,
         _ak,
@@ -986,7 +986,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunEipClient client = new KsyunEipClient(
         _region,
         _protocol,
         _ak,

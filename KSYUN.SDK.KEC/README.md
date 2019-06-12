@@ -1,7 +1,7 @@
 # CSharp API SDK for namespace KSYUN.SDK.KEC classname KsyunKecClient 
 
 
-- Build date: 2019-06-12 11:15
+- Build date: 2019-06-12 11:49
 ## Installation
 
 Use .NET CLI
@@ -47,7 +47,7 @@ Class Test {
         string _ak = "xxx";
         string _sk = "xxx";
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -119,7 +119,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -489,7 +489,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -624,7 +624,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -770,7 +770,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -909,7 +909,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -1048,7 +1048,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -1199,7 +1199,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -1330,7 +1330,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -1461,7 +1461,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -1771,7 +1771,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -1893,7 +1893,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -2050,7 +2050,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -2189,7 +2189,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -2327,7 +2327,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -2465,7 +2465,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -2599,7 +2599,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -2739,7 +2739,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -2867,7 +2867,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -2992,7 +2992,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -3154,7 +3154,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -3286,7 +3286,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -3411,7 +3411,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -3545,7 +3545,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -3682,7 +3682,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -3811,7 +3811,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -3945,7 +3945,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -4073,7 +4073,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -4198,7 +4198,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -4366,7 +4366,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -4498,7 +4498,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -4665,7 +4665,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -4807,7 +4807,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -4949,7 +4949,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
@@ -5084,7 +5084,7 @@ Class Test {
         string _sk = "xxx";
 
 
-        Client client = new Client(
+        KsyunKecClient client = new KsyunKecClient(
         _region,
         _protocol,
         _ak,
