@@ -1,0 +1,58 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/yangdongxu/work/0_ksyun/apicodegen/output/CSharp/KSYUN.SDK.SLB/KSYUN.SDK.SLB.csproj",
+    "projectName": "KSYUN.SDK.SLB",
+    "projectPath": "/Users/yangdongxu/work/0_ksyun/apicodegen/output/CSharp/KSYUN.SDK.SLB/KSYUN.SDK.SLB.csproj",
+    "outputPath": "/Users/yangdongxu/work/0_ksyun/apicodegen/output/CSharp/KSYUN.SDK.SLB/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {}
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "Manatee.Json": {
+          "target": "Package",
+          "version": "[10.1.3, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        },
+        "Newtonsoft.Json": {
+          "target": "Package",
+          "version": "[12.0.2, )"
+        },
+        "RestSharp": {
+          "target": "Package",
+          "version": "[106.6.9, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}
