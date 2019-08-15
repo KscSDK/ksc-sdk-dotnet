@@ -17,7 +17,7 @@ namespace KSYUN.SDK.VPC.Model.ModifyCustomerGateway.query
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"ModifyCustomerGateway\"],\"default\":\"ModifyCustomerGateway\"},\"Version\":{\"type\":\"string\",\"default\":\"2016-03-04\"},\"CustomerGatewayId\":{\"type\":\"string\"},\"CustomerGatewayName\":{\"type\":\"string\"},\"CustomerGatewayAddress\":{\"type\":\"string\"},\"HaCustomerGatewayAddress\":{\"type\":\"string\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

@@ -43,7 +43,7 @@ namespace KSYUN.SDK.SMS
             server = "ksms";
             _parameters.Add("server","ksms");
             Regex myRegex = new Regex(@"{(.*?)}");
-            baseurl = myRegex.Replace(@"{protocol}://{server}.{region}.api.ksyun.com", match => RegexReadTerm(match, _parameters));
+            baseurl = myRegex.Replace(@"{protocol}://{server}.api.ksyun.com", match => RegexReadTerm(match, _parameters));
             ak = _ak;
             sk = _sk;
         }
@@ -70,12 +70,12 @@ namespace KSYUN.SDK.SMS
             var _cookie = new JObject();
 
             
-            string _query_default_string = "{\"version\":\"2019-05-01\"}";
+            string _query_default_string = "{\"Version\":\"2019-05-01\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
             _query = _query_default;
 
-            string _query_fixed_string = "{\"action\":\"SendSms\"}";
+            string _query_fixed_string = "{\"Action\":\"SendSms\"}";
             JObject _query_fixed = JObject.Parse(_query_fixed_string);
             _query.Merge(_query_fixed);
 
@@ -122,12 +122,12 @@ namespace KSYUN.SDK.SMS
             var _cookie = new JObject();
 
             
-            string _query_default_string = "{\"version\":\"2019-05-01\"}";
+            string _query_default_string = "{\"Version\":\"2019-05-01\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
             _query = _query_default;
 
-            string _query_fixed_string = "{\"action\":\"BatchSendSms\"}";
+            string _query_fixed_string = "{\"Action\":\"BatchSendSms\"}";
             JObject _query_fixed = JObject.Parse(_query_fixed_string);
             _query.Merge(_query_fixed);
 

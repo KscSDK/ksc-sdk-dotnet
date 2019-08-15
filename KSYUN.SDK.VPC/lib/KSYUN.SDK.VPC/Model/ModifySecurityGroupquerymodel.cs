@@ -17,7 +17,7 @@ namespace KSYUN.SDK.VPC.Model.ModifySecurityGroup.query
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"ModifySecurityGroup\"],\"default\":\"ModifySecurityGroup\"},\"Version\":{\"type\":\"string\",\"default\":\"2016-03-04\"},\"SecurityGroupId\":{\"type\":\"string\"},\"SecurityGroupName\":{\"type\":\"string\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

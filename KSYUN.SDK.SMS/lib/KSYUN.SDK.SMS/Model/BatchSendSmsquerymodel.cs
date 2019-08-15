@@ -14,7 +14,7 @@ namespace KSYUN.SDK.SMS.Model.BatchSendSms.query
         public BatchSendSmsqueryModel()
         {
             JsonSerializer serializer = new JsonSerializer();
-            JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"action\":{\"type\":\"string\",\"enum\":[\"BatchSendSms\"],\"default\":\"BatchSendSms\"},\"version\":{\"type\":\"string\",\"default\":\"2019-05-01\"}}}");
+            JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"BatchSendSms\"],\"default\":\"BatchSendSms\"},\"Version\":{\"type\":\"string\",\"default\":\"2019-05-01\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
         public JSONValidStruct validtor(JToken data)

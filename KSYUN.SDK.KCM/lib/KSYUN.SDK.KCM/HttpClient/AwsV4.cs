@@ -162,7 +162,7 @@ namespace KSYUN.SDK.KCM.HttpClient.Signature
             string CanonicalSignedHeaders = String.Join(";", SignedHeaders);
 
             string CanonicalRequest = String.Join("\n", new string[]{
-                method,
+                method.ToUpperInvariant(),
                 createCanonicalURI(uri),
                 getCanonicalQueryParams(query),
                 canonicalHeader(AllHeaders, SignedHeaders),

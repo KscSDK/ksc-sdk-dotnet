@@ -23,7 +23,7 @@ namespace KSYUN.SDK.VPC.HttpClient
         public string methodString;
         public Dictionary<string, string> headers;
         public string queries;
-        public JObject requestBodies;
+        public JToken requestBodies;
 
         public string contentType;
         public string authType;
@@ -36,6 +36,21 @@ namespace KSYUN.SDK.VPC.HttpClient
         public RestClient client;
         public HttpClientCore(string _address, string _method, JObject _headers, JObject _params, JObject _queries, JObject _requestBodies)
         {
+            var _objRequestBodies = _requestBodies as JToken;
+            HttpClientCoreMethod(_address, _method, _headers, _params, _queries, _objRequestBodies);
+        }
+        public HttpClientCore(string _address, string _method, JObject _headers, JObject _params, JObject _queries, JArray _requestBodies)
+        {
+            var _objRequestBodies = _requestBodies as JToken;
+            HttpClientCoreMethod(_address, _method, _headers, _params, _queries, _objRequestBodies);
+        }
+        public HttpClientCore(string _address, string _method, JObject _headers, JObject _params, JObject _queries, JValue _requestBodies)
+        {
+            var _objRequestBodies = _requestBodies as JToken;
+            HttpClientCoreMethod(_address, _method, _headers, _params, _queries, _objRequestBodies);
+        }
+        public void HttpClientCoreMethod(string _address, string _method, JObject _headers, JObject _params, JObject _queries, JToken _requestBodies)
+        {
             methodString = _method;
             method = methodGenerator(_method);
             queries = queriesGenerator(_queries);
@@ -43,7 +58,7 @@ namespace KSYUN.SDK.VPC.HttpClient
             headers = headersGenerator(_headers);
             reInitHeaders();
             requestBodies = _requestBodies;
-            contentType = "json";
+            contentType = "urlencoded";
             payload = "";
             authType = "";
             AK = "";
@@ -114,6 +129,20 @@ namespace KSYUN.SDK.VPC.HttpClient
         {
             JObject res = _flatten(new JObject(), _data, "");
             return res;
+        }
+
+        private JToken flatten(JToken _data)
+        {
+            if (_data.Type == JTokenType.Object)
+            {
+                JObject res = flatten(_data as JObject);
+                return  res as JToken;
+            }
+            else
+            {
+                JObject res =  new JObject(new JProperty("data", _data));
+                return res as JToken;
+            }
         }
         public void setAwsAuthType(string _ak, string _sk, string _service, string _region)
         {
@@ -190,31 +219,35 @@ namespace KSYUN.SDK.VPC.HttpClient
             Dictionary<string, string> res = _headers.ToObject<Dictionary<string, string>>();
             return res;
         }
-        private void reAddHeader(string key,string value ){
+        private void reAddHeader(string key, string value, bool keep)
+        {
+            var i_value = "";
             foreach (var item in headers)
             {
-                if(item.Key.ToLower() == key.ToLower()){
-                    headers.Remove(key);
+                if (item.Key.ToLower() == key.ToLower())
+                {
+                    headers.Remove(item.Key);
+                    i_value = item.Value;
                 }
             }
-            headers.Add(key,value);
+            if (i_value != "" && keep == true)
+            {
+                headers.Add(key, i_value);
+            }
+            else
+            {
+                headers.Add(key, value);
+            }
         }
-        private void reInitHeaders(){
+        private void reAddHeader(string key, string value)
+        {
+            reAddHeader(key, value, false);
+        }
+        private void reInitHeaders()
+        {
             reAddHeader("X-KSC-From", "CSharp-SDK");
             reAddHeader("Accept", "application/json");
-            reAddHeader("Host", address.Host);
-        }
-        private string formdataGenerator(JObject _data)
-        {
-            Dictionary<string, string> res = _data.ToObject<Dictionary<string, string>>();
-            MultipartFormDataContent form = new MultipartFormDataContent();
-            foreach (var k in res)
-            {
-                // Console.WriteLine(k.Value+k.Key);
-                form.Add(new StringContent(k.Value),k.Key);
-            }
-            reAddHeader("Content-Type", form.Headers.ContentType.ToString());
-            return form.ReadAsStringAsync().Result.ToString();
+            reAddHeader("Host", address.Host, true);
         }
         private string RegexReadTerm(Match m, JObject _parameters)
         {
@@ -228,37 +261,67 @@ namespace KSYUN.SDK.VPC.HttpClient
 
             return res;
         }
-        private string urlencodedGenerator(JObject _data)
+        private string formdataGenerator(JToken _data)
+        {
+            Dictionary<string, string> res = (_data as JObject).ToObject<Dictionary<string, string>>();
+            MultipartFormDataContent form = new MultipartFormDataContent();
+            foreach (var k in res)
+            {
+                // Console.WriteLine(k.Value+k.Key);
+                form.Add(new StringContent(k.Value), k.Key);
+            }
+            reAddHeader("Content-Type", form.Headers.ContentType.ToString());
+            var _payload = form.ReadAsStringAsync().Result.ToString();
+            reAddHeader("Content-Length", _payload.Length.ToString());
+            return _payload;
+        }
+        private string urlencodedGenerator(JToken _data)
         {
             reAddHeader("Content-Type", "application/x-www-form-urlencoded");
-            return objectToQuerystring(_data);
+            var _payload = objectToQuerystring(_data as JObject);
+            reAddHeader("Content-Length", _payload.Length.ToString());
+            return _payload;
         }
-        private string jsonGenerator(JObject _data)
+        private string jsonGenerator(JToken _data)
         {
-
+            var _payload = "";
             reAddHeader("Content-Type", "application/json");
-            if (requestBodies.HasValues == false)
+
+            if(_data.Type != JTokenType.Array && _data.Type != JTokenType.Object){
+                _payload = _data.ToString();
+                return _payload;
+            }
+            if (_data.Type == JTokenType.Object && requestBodies.HasValues == false)
             {
-                return "";
+                _payload = "";
             }
             else
             {
-                return _data.ToString();
+                _payload = _data.ToString();
             }
+            reAddHeader("Content-Length", _payload.Length.ToString());
+            return _payload;
         }
         private void payloadGenerator()
         {
+            if(method == Method.GET){
+                return;
+            }
             if (contentType == "json")
             {
                 payload = jsonGenerator(requestBodies);
             }
-            if (contentType == "formdata")
+            else if (contentType == "formdata")
             {
                 payload = formdataGenerator(flatten(requestBodies));
             }
-            if (contentType == "urlencoded")
+            else if (contentType == "urlencoded")
             {
                 payload = urlencodedGenerator(flatten(requestBodies));
+            }else {
+                var _payload = requestBodies.ToString();
+                reAddHeader("Content-Length", _payload.Length.ToString());
+                payload = _payload;
             }
         }
         public string ToQueryString(NameValueCollection nvc)
@@ -344,7 +407,8 @@ namespace KSYUN.SDK.VPC.HttpClient
             var res = new HttpClientResponse();
             res.response = response;
 
-            if(!response.IsSuccessful){
+            if (!response.IsSuccessful)
+            {
                 throw new System.SystemException("request error status : " + response.StatusCode + "; messages : " + response.ErrorMessage + "; data : " + response.Content);
             }
             res.data = JObject.Parse(response.Content);

@@ -3804,19 +3804,19 @@
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "restore": {
-      "projectUniqueName": "/Users/yangdongxu/work/0_ksyun/apicodegen/output/CSharp/KSYUN.SDK.KCM/KSYUN.SDK.KCM.csproj",
+      "projectUniqueName": "/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.KCM/KSYUN.SDK.KCM.csproj",
       "projectName": "KSYUN.SDK.KCM",
-      "projectPath": "/Users/yangdongxu/work/0_ksyun/apicodegen/output/CSharp/KSYUN.SDK.KCM/KSYUN.SDK.KCM.csproj",
+      "projectPath": "/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.KCM/KSYUN.SDK.KCM.csproj",
       "packagesPath": "/Users/yangdongxu/.nuget/packages/",
-      "outputPath": "/Users/yangdongxu/work/0_ksyun/apicodegen/output/CSharp/KSYUN.SDK.KCM/obj/",
+      "outputPath": "/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.KCM/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/yangdongxu/.config/NuGet/NuGet.Config"
+        "/Users/yangdongxu/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"

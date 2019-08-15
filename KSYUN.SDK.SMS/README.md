@@ -1,7 +1,7 @@
 # CSharp API SDK for namespace KSYUN.SDK.SMS classname KsyunSMSClient 
 
 
-- Build date: 2019-08-14 17:58
+- Build date: 2019-08-15 10:12
 ## Installation
 
 Use .NET CLI
@@ -24,7 +24,7 @@ using Manatee.Json; //[Schema Valid](https://gregsdennis.github.io/Manatee.Json/
 
 ## Documentation for API Endpoints
 ```bash
-URL: {protocol}://{server}.{region}.api.ksyun.com
+URL: {protocol}://{server}.api.ksyun.com
 Parameters:
    region: 
    protocol: http | https
@@ -122,14 +122,14 @@ class Test {
         {
             "type": "object",
             "properties": {
-                "action": {
+                "Action": {
                     "type": "string",
                     "enum": [
                         "SendSms"
                     ],
                     "default": "SendSms"
                 },
-                "version": {
+                "Version": {
                     "type": "string",
                     "default": "2019-05-01"
                 }
@@ -140,14 +140,14 @@ class Test {
         
         ```json
         {
-            "version": "2019-05-01"
+            "Version": "2019-05-01"
         }
         ```
         - Constant
         
         ```json
         {
-            "action": "SendSms"
+            "Action": "SendSms"
         }
         ```
         - Example #例子是json 格式 , C# 中为 JObject 类型
@@ -286,14 +286,14 @@ class Test {
         {
             "type": "object",
             "properties": {
-                "action": {
+                "Action": {
                     "type": "string",
                     "enum": [
                         "BatchSendSms"
                     ],
                     "default": "BatchSendSms"
                 },
-                "version": {
+                "Version": {
                     "type": "string",
                     "default": "2019-05-01"
                 }
@@ -304,14 +304,14 @@ class Test {
         
         ```json
         {
-            "version": "2019-05-01"
+            "Version": "2019-05-01"
         }
         ```
         - Constant
         
         ```json
         {
-            "action": "BatchSendSms"
+            "Action": "BatchSendSms"
         }
         ```
         - Example #例子是json 格式 , C# 中为 JObject 类型

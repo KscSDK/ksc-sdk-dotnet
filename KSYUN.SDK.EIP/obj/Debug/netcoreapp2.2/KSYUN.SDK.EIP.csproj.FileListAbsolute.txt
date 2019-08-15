@@ -1,0 +1,11 @@
+/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.EIP/bin/Debug/netcoreapp2.2/KSYUN.SDK.EIP.deps.json
+/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.EIP/bin/Debug/netcoreapp2.2/KSYUN.SDK.EIP.runtimeconfig.json
+/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.EIP/bin/Debug/netcoreapp2.2/KSYUN.SDK.EIP.runtimeconfig.dev.json
+/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.EIP/bin/Debug/netcoreapp2.2/KSYUN.SDK.EIP.dll
+/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.EIP/bin/Debug/netcoreapp2.2/KSYUN.SDK.EIP.pdb
+/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.EIP/obj/Debug/netcoreapp2.2/KSYUN.SDK.EIP.csprojAssemblyReference.cache
+/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.EIP/obj/Debug/netcoreapp2.2/KSYUN.SDK.EIP.csproj.CoreCompileInputs.cache
+/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.EIP/obj/Debug/netcoreapp2.2/KSYUN.SDK.EIP.AssemblyInfoInputs.cache
+/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.EIP/obj/Debug/netcoreapp2.2/KSYUN.SDK.EIP.AssemblyInfo.cs
+/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.EIP/obj/Debug/netcoreapp2.2/KSYUN.SDK.EIP.dll
+/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.EIP/obj/Debug/netcoreapp2.2/KSYUN.SDK.EIP.pdb

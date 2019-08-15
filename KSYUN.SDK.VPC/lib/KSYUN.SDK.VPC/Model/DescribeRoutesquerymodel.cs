@@ -17,7 +17,7 @@ namespace KSYUN.SDK.VPC.Model.DescribeRoutes.query
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"DescribeRoutes\"],\"default\":\"DescribeRoutes\"},\"Version\":{\"type\":\"string\",\"default\":\"2016-03-04\"},\"RouteId\":{\"type\":\"string\"},\"Filter\":{\"type\":\"string\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

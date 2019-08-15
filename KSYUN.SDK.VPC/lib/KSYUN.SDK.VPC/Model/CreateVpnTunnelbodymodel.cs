@@ -17,7 +17,7 @@ namespace KSYUN.SDK.VPC.Model.CreateVpnTunnel.body
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"VpnTunnelName\":{\"type\":\"string\",\"default\":\"Ksc_vpn_tunnel\"},\"Type\":{\"type\":\"string\"},\"VpnGreIp\":{\"type\":\"string\"},\"HaVpnGreIp\":{\"type\":\"string\"},\"CustomerGreIp\":{\"type\":\"string\"},\"HaCustomerGreIp\":{\"type\":\"string\"},\"CustomerGatewayId\":{\"type\":\"string\"},\"PreSharedKey\":{\"type\":\"string\"},\"IkeAuthenAlgorithm\":{\"type\":\"string\",\"default\":\"md5\"},\"IkeDHGroup\":{\"type\":\"integer\",\"default\":1},\"IkeEncryAlgorithm\":{\"type\":\"string\",\"default\":\"aes\"},\"IpsecEncryAlgorithm\":{\"type\":\"string\",\"default\":\"esp-aes\"},\"IpsecAuthenAlgorithm\":{\"type\":\"string\",\"default\":\"esp-sha-hmac\"},\"IpsecLifetimeTraffic\":{\"type\":\"integer\"},\"IpsecLifetimeSecond\":{\"type\":\"integer\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

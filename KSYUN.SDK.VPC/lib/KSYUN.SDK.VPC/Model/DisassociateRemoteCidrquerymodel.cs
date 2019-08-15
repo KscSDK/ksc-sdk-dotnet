@@ -17,7 +17,7 @@ namespace KSYUN.SDK.VPC.Model.DisassociateRemoteCidr.query
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"DisassociateRemoteCidr\"],\"default\":\"DisassociateRemoteCidr\"},\"Version\":{\"type\":\"string\",\"default\":\"2016-03-04\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

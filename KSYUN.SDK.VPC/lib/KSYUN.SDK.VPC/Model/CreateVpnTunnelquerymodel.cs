@@ -14,10 +14,10 @@ namespace KSYUN.SDK.VPC.Model.CreateVpnTunnel.query
         public CreateVpnTunnelqueryModel()
         {
             JsonSerializer serializer = new JsonSerializer();
-            JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"action\":{\"type\":\"string\",\"enum\":[\"CreateVpnTunnel\"],\"default\":\"CreateVpnTunnel\"},\"version\":{\"type\":\"string\",\"default\":\"2016-03-04\"}}}");
+            JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"CreateVpnTunnel\"],\"default\":\"CreateVpnTunnel\"},\"Version\":{\"type\":\"string\",\"default\":\"2016-03-04\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

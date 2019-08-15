@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>KSYUN.SDK.KCM</id>
+    <version>1.0.1</version>
+    <authors>KSYUN.SDK.KCM</authors>
+    <owners>KSYUN.SDK.KCM</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.2">
+        <dependency id="Manatee.Json" version="10.1.3" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="12.0.2" exclude="Build,Analyzers" />
+        <dependency id="RestSharp" version="106.6.9" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.KCM/bin/Debug/netcoreapp2.2/KSYUN.SDK.KCM.runtimeconfig.json" target="lib/netcoreapp2.2/KSYUN.SDK.KCM.runtimeconfig.json" />
+    <file src="/Users/yangdongxu/work/0_ksyun/ksc-sdk-dotnet/KSYUN.SDK.KCM/bin/Debug/netcoreapp2.2/KSYUN.SDK.KCM.dll" target="lib/netcoreapp2.2/KSYUN.SDK.KCM.dll" />
+  </files>
+</package>

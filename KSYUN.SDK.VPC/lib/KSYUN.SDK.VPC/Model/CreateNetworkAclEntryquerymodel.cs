@@ -17,7 +17,7 @@ namespace KSYUN.SDK.VPC.Model.CreateNetworkAclEntry.query
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"CreateNetworkAclEntry\"],\"default\":\"CreateNetworkAclEntry\"},\"Version\":{\"type\":\"string\",\"default\":\"2016-03-04\"},\"Description\":{\"type\":\"string\"},\"NetworkAclId\":{\"type\":\"string\"},\"CidrBlock\":{\"type\":\"string\"},\"RuleNumber\":{\"type\":\"integer\"},\"Direction\":{\"type\":\"string\"},\"RuleAction\":{\"type\":\"string\"},\"Protocol\":{\"type\":\"string\"},\"IcmpType\":{\"type\":\"integer\"},\"PortRangeFrom\":{\"type\":\"integer\"},\"PortRangeTo\":{\"type\":\"integer\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

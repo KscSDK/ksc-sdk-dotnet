@@ -17,7 +17,7 @@ namespace KSYUN.SDK.VPC.Model.ModifyVpc.query
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"ModifyVpc\"],\"default\":\"ModifyVpc\"},\"Version\":{\"type\":\"string\",\"default\":\"2016-03-04\"},\"VpcName\":{\"type\":\"string\"},\"VpcId\":{\"type\":\"string\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

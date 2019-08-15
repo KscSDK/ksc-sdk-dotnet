@@ -1,7 +1,7 @@
 # CSharp API SDK for namespace KSYUN.SDK.KCM classname KsyunKcmClient 
 
 
-- Build date: 2019-06-12 11:49
+- Build date: 2019-08-15 10:03
 ## Installation
 
 Use .NET CLI
@@ -39,7 +39,7 @@ Constants:# no need setting
 ```c#
 using KSYUN.SDK.KCM;
 
-Class Test {
+class Test {
     static void Main()
     {
         string _region = "xxx";
@@ -71,6 +71,8 @@ Class | Method | HTTP request | Description
 ## Method Info
 
 
+
+
 ### DescribeCertificates
 
 - Example
@@ -80,7 +82,7 @@ using KSYUN.SDK.KCM;
 using Newtonsoft.Json.Linq;
 using RestSharp;
 
-Class Test {
+class Test {
     static void Main()
     {
         string _region = "xxx";
@@ -97,12 +99,14 @@ Class Test {
         );
 
 
-        JObject _body = new JObject();
+        JObject _DescribeCertificates_body = new JObject();
 
-        HttpClientResponse res = client.DescribeCertificates(JObject _body );
-        JObject data = res.data;
-        IRestResponse response = res.response;
-        Console.WriteLine(data);
+            
+
+        HttpClientResponse DescribeCertificates_res = client.DescribeCertificates(_DescribeCertificates_body);
+        JObject DescribeCertificates_data = DescribeCertificates_res.data;
+        IRestResponse DescribeCertificates_response = DescribeCertificates_res.response;
+        Console.WriteLine(DescribeCertificates_data);
     }
 }
 
@@ -115,19 +119,22 @@ Class Test {
          
         ```json
         {
-            "Action": {
-                "type": "string",
-                "enum": [
-                    "DescribeCertificates"
-                ],
-                "default": "DescribeCertificates"
-            },
-            "CertificateId": {
-                "type": "string"
-            },
-            "Version": {
-                "type": "string",
-                "default": "2016-03-04"
+            "type": "object",
+            "properties": {
+                "Action": {
+                    "type": "string",
+                    "enum": [
+                        "DescribeCertificates"
+                    ],
+                    "default": "DescribeCertificates"
+                },
+                "CertificateId": {
+                    "type": "string"
+                },
+                "Version": {
+                    "type": "string",
+                    "default": "2016-03-04"
+                }
             }
         }
         ```
@@ -149,7 +156,7 @@ Class Test {
         
         ```json
         {}                
-        ```    
+        ``` 
 - Return
     - 200
         - Type -> JObject
@@ -158,38 +165,41 @@ Class Test {
         ```json
         //application/json
         {
-            "RequestId": {
-                "type": "string"
-            },
-            "Certificate": {
-                "type": "object",
-                "properties": {
-                    "CertificateName": {
-                        "type": "string"
-                    },
-                    "CertificateId": {
-                        "type": "string"
-                    },
-                    "Enable": {
-                        "type": "string"
-                    },
-                    "IssueDomain": {
-                        "type": "string"
-                    },
-                    "IssueTime": {
-                        "type": "string"
-                    },
-                    "ExpirationTime": {
-                        "type": "string"
-                    },
-                    "CertificateContent": {
-                        "type": "string"
-                    },
-                    "CertificateType": {
-                        "type": "string"
-                    },
-                    "ConfigDomainNames": {
-                        "type": "string"
+            "type": "object",
+            "properties": {
+                "RequestId": {
+                    "type": "string"
+                },
+                "Certificate": {
+                    "type": "object",
+                    "properties": {
+                        "CertificateName": {
+                            "type": "string"
+                        },
+                        "CertificateId": {
+                            "type": "string"
+                        },
+                        "Enable": {
+                            "type": "string"
+                        },
+                        "IssueDomain": {
+                            "type": "string"
+                        },
+                        "IssueTime": {
+                            "type": "string"
+                        },
+                        "ExpirationTime": {
+                            "type": "string"
+                        },
+                        "CertificateContent": {
+                            "type": "string"
+                        },
+                        "CertificateType": {
+                            "type": "string"
+                        },
+                        "ConfigDomainNames": {
+                            "type": "string"
+                        }
                     }
                 }
             }
@@ -207,6 +217,8 @@ Class Test {
         //------------------------------------------------
 
         ```
+
+
 
 ### CreateCertificate
 
@@ -217,7 +229,7 @@ using KSYUN.SDK.KCM;
 using Newtonsoft.Json.Linq;
 using RestSharp;
 
-Class Test {
+class Test {
     static void Main()
     {
         string _region = "xxx";
@@ -234,13 +246,17 @@ Class Test {
         );
 
 
-        JObject _query = new JObject();
-        JObject _body = new JObject();
+        JObject _CreateCertificate_query = new JObject();
 
-        HttpClientResponse res = client.CreateCertificate(JObject _query , JObject _body );
-        JObject data = res.data;
-        IRestResponse response = res.response;
-        Console.WriteLine(data);
+            
+        JObject _CreateCertificate_body = new JObject();
+
+            
+
+        HttpClientResponse CreateCertificate_res = client.CreateCertificate(_CreateCertificate_query,_CreateCertificate_body);
+        JObject CreateCertificate_data = CreateCertificate_res.data;
+        IRestResponse CreateCertificate_response = CreateCertificate_res.response;
+        Console.WriteLine(CreateCertificate_data);
     }
 }
 
@@ -253,16 +269,19 @@ Class Test {
          
         ```json
         {
-            "action": {
-                "type": "string",
-                "enum": [
-                    "CreateCertificate"
-                ],
-                "default": "CreateCertificate"
-            },
-            "version": {
-                "type": "string",
-                "default": "2016-03-04"
+            "type": "object",
+            "properties": {
+                "Action": {
+                    "type": "string",
+                    "enum": [
+                        "CreateCertificate"
+                    ],
+                    "default": "CreateCertificate"
+                },
+                "Version": {
+                    "type": "string",
+                    "default": "2016-03-04"
+                }
             }
         }
         ```
@@ -270,35 +289,38 @@ Class Test {
         
         ```json
         {
-            "version": "2016-03-04"
+            "Version": "2016-03-04"
         }
         ```
         - Constant
         
         ```json
         {
-            "action": "CreateCertificate"
+            "Action": "CreateCertificate"
         }
         ```
         - Example #例子是json 格式 , C# 中为 JObject 类型
         
         ```json
         {}                
-        ```    
+        ``` 
     - _body
         - Type -> JObject
         - Struct  
          
         ```json
         {
-            "CertificateName": {
-                "type": "string"
-            },
-            "PrivateKey": {
-                "type": "string"
-            },
-            "PublicKey": {
-                "type": "string"
+            "type": "object",
+            "properties": {
+                "CertificateName": {
+                    "type": "string"
+                },
+                "PrivateKey": {
+                    "type": "string"
+                },
+                "PublicKey": {
+                    "type": "string"
+                }
             }
         }
         ```
@@ -316,7 +338,7 @@ Class Test {
         
         ```json
         {}                
-        ```    
+        ``` 
 - Return
     - 200
         - Type -> JObject
@@ -325,38 +347,40 @@ Class Test {
         ```json
         //application/json
         {
-            "RequestId": {
-                "type": "string"
-            },
-            "CertificateSet": {
-                "type": "object",
-                "properties": {
-                    "CertificateName": {
-                        "type": "string"
-                    },
-                    "CertificateId": {
-                        "type": "string"
-                    },
-                    "Enable": {
-                        "type": "string"
-                    },
-                    "IssueDomain": {
-                        "type": "string"
-                    },
-                    "IssueTime": {
-                        "type": "string"
-                    },
-                    "ExpirationTime": {
-                        "type": "string"
-                    },
-                    "CertificateContent": {
-                        "type": "string"
-                    },
-                    "CertificateType": {
-                        "type": "string"
-                    },
-                    "ConfigDomainNames": {
-                        "type": "string"
+            "properties": {
+                "RequestId": {
+                    "type": "string"
+                },
+                "CertificateSet": {
+                    "type": "object",
+                    "properties": {
+                        "CertificateName": {
+                            "type": "string"
+                        },
+                        "CertificateId": {
+                            "type": "string"
+                        },
+                        "Enable": {
+                            "type": "string"
+                        },
+                        "IssueDomain": {
+                            "type": "string"
+                        },
+                        "IssueTime": {
+                            "type": "string"
+                        },
+                        "ExpirationTime": {
+                            "type": "string"
+                        },
+                        "CertificateContent": {
+                            "type": "string"
+                        },
+                        "CertificateType": {
+                            "type": "string"
+                        },
+                        "ConfigDomainNames": {
+                            "type": "string"
+                        }
                     }
                 }
             }
@@ -375,6 +399,8 @@ Class Test {
 
         ```
 
+
+
 ### DeleteCertificate
 
 - Example
@@ -384,7 +410,7 @@ using KSYUN.SDK.KCM;
 using Newtonsoft.Json.Linq;
 using RestSharp;
 
-Class Test {
+class Test {
     static void Main()
     {
         string _region = "xxx";
@@ -401,12 +427,14 @@ Class Test {
         );
 
 
-        JObject _query = new JObject();
+        JObject _DeleteCertificate_query = new JObject();
 
-        HttpClientResponse res = client.DeleteCertificate(JObject _query );
-        JObject data = res.data;
-        IRestResponse response = res.response;
-        Console.WriteLine(data);
+            
+
+        HttpClientResponse DeleteCertificate_res = client.DeleteCertificate(_DeleteCertificate_query);
+        JObject DeleteCertificate_data = DeleteCertificate_res.data;
+        IRestResponse DeleteCertificate_response = DeleteCertificate_res.response;
+        Console.WriteLine(DeleteCertificate_data);
     }
 }
 
@@ -419,19 +447,22 @@ Class Test {
          
         ```json
         {
-            "Action": {
-                "type": "string",
-                "enum": [
-                    "DeleteCertificate"
-                ],
-                "default": "DeleteCertificate"
-            },
-            "CertificateId": {
-                "type": "string"
-            },
-            "Version": {
-                "type": "string",
-                "default": "2016-03-04"
+            "type": "object",
+            "properties": {
+                "Action": {
+                    "type": "string",
+                    "enum": [
+                        "DeleteCertificate"
+                    ],
+                    "default": "DeleteCertificate"
+                },
+                "CertificateId": {
+                    "type": "string"
+                },
+                "Version": {
+                    "type": "string",
+                    "default": "2016-03-04"
+                }
             }
         }
         ```
@@ -453,7 +484,7 @@ Class Test {
         
         ```json
         {}                
-        ```    
+        ``` 
 - Return
     - 200
         - Type -> JObject
@@ -462,11 +493,14 @@ Class Test {
         ```json
         //application/json
         {
-            "RequestId": {
-                "type": "string"
-            },
-            "Return": {
-                "type": "boolean"
+            "type": "object",
+            "properties": {
+                "RequestId": {
+                    "type": "string"
+                },
+                "Return": {
+                    "type": "boolean"
+                }
             }
         }  
 
@@ -483,6 +517,8 @@ Class Test {
 
         ```
 
+
+
 ### ModifyCertificate
 
 - Example
@@ -492,7 +528,7 @@ using KSYUN.SDK.KCM;
 using Newtonsoft.Json.Linq;
 using RestSharp;
 
-Class Test {
+class Test {
     static void Main()
     {
         string _region = "xxx";
@@ -509,12 +545,14 @@ Class Test {
         );
 
 
-        JObject _query = new JObject();
+        JObject _ModifyCertificate_query = new JObject();
 
-        HttpClientResponse res = client.ModifyCertificate(JObject _query );
-        JObject data = res.data;
-        IRestResponse response = res.response;
-        Console.WriteLine(data);
+            
+
+        HttpClientResponse ModifyCertificate_res = client.ModifyCertificate(_ModifyCertificate_query);
+        JObject ModifyCertificate_data = ModifyCertificate_res.data;
+        IRestResponse ModifyCertificate_response = ModifyCertificate_res.response;
+        Console.WriteLine(ModifyCertificate_data);
     }
 }
 
@@ -527,22 +565,25 @@ Class Test {
          
         ```json
         {
-            "Action": {
-                "type": "string",
-                "enum": [
-                    "ModifyCertificate"
-                ],
-                "default": "ModifyCertificate"
-            },
-            "CertificateId": {
-                "type": "string"
-            },
-            "CertificateName": {
-                "type": "string"
-            },
-            "Version": {
-                "type": "string",
-                "default": "2016-03-04"
+            "type": "object",
+            "properties": {
+                "Action": {
+                    "type": "string",
+                    "enum": [
+                        "ModifyCertificate"
+                    ],
+                    "default": "ModifyCertificate"
+                },
+                "CertificateId": {
+                    "type": "string"
+                },
+                "CertificateName": {
+                    "type": "string"
+                },
+                "Version": {
+                    "type": "string",
+                    "default": "2016-03-04"
+                }
             }
         }
         ```
@@ -564,7 +605,7 @@ Class Test {
         
         ```json
         {}                
-        ```    
+        ``` 
 - Return
     - 200
         - Type -> JObject
@@ -573,38 +614,41 @@ Class Test {
         ```json
         //application/json
         {
-            "RequestId": {
-                "type": "string"
-            },
-            "Certificate": {
-                "type": "object",
-                "properties": {
-                    "CertificateName": {
-                        "type": "string"
-                    },
-                    "CertificateId": {
-                        "type": "string"
-                    },
-                    "Enable": {
-                        "type": "string"
-                    },
-                    "IssueDomain": {
-                        "type": "string"
-                    },
-                    "IssueTime": {
-                        "type": "string"
-                    },
-                    "ExpirationTime": {
-                        "type": "string"
-                    },
-                    "CertificateContent": {
-                        "type": "string"
-                    },
-                    "CertificateType": {
-                        "type": "string"
-                    },
-                    "ConfigDomainNames": {
-                        "type": "string"
+            "type": "object",
+            "properties": {
+                "RequestId": {
+                    "type": "string"
+                },
+                "Certificate": {
+                    "type": "object",
+                    "properties": {
+                        "CertificateName": {
+                            "type": "string"
+                        },
+                        "CertificateId": {
+                            "type": "string"
+                        },
+                        "Enable": {
+                            "type": "string"
+                        },
+                        "IssueDomain": {
+                            "type": "string"
+                        },
+                        "IssueTime": {
+                            "type": "string"
+                        },
+                        "ExpirationTime": {
+                            "type": "string"
+                        },
+                        "CertificateContent": {
+                            "type": "string"
+                        },
+                        "CertificateType": {
+                            "type": "string"
+                        },
+                        "ConfigDomainNames": {
+                            "type": "string"
+                        }
                     }
                 }
             }

@@ -17,7 +17,7 @@ namespace KSYUN.SDK.VPC.Model.ModifyNetworkAclEntry.query
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"ModifyNetworkAclEntry\"],\"default\":\"ModifyNetworkAclEntry\"},\"Version\":{\"type\":\"string\",\"default\":\"2016-03-04\"},\"NetworkAclName\":{\"type\":\"string\"},\"NetworkAclId\":{\"type\":\"string\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

@@ -62,15 +62,16 @@ namespace KSYUN.SDK.KCM
         }
 
 
-        public HttpClientResponse DescribeCertificates(JObject _body )
+        public HttpClientResponse DescribeCertificates(JObject _body)
         {
             string _url = baseurl + "/";
             string _method = "post";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _query = new JObject();
-            JObject _cookie = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _query = new JObject();
+            var _cookie = new JObject();
 
+            
             string _body_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _body_default = JObject.Parse(_body_default_string);
             _body_default.Merge(_body);
@@ -81,11 +82,13 @@ namespace KSYUN.SDK.KCM
             _body.Merge(_body_fixed);
 
             var _bodyModel = new DescribeCertificatesbodyModel();
-            var _bodyvalid = _bodyModel.validtor(_body);
+            var _bodyvalid = _bodyModel.validtor(_body as JToken);
 
             if(_bodyvalid.status != true){
                throw new System.ArgumentException(_bodyvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -94,29 +97,33 @@ namespace KSYUN.SDK.KCM
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse CreateCertificate(JObject _query , JObject _body )
+        public HttpClientResponse CreateCertificate(JObject _query,JObject _body)
         {
             string _url = baseurl + "/";
             string _method = "post";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
 
-            string _query_default_string = "{\"version\":\"2016-03-04\"}";
+            
+            string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
             _query = _query_default;
 
-            string _query_fixed_string = "{\"action\":\"CreateCertificate\"}";
+            string _query_fixed_string = "{\"Action\":\"CreateCertificate\"}";
             JObject _query_fixed = JObject.Parse(_query_fixed_string);
             _query.Merge(_query_fixed);
 
             var _queryModel = new CreateCertificatequeryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
+            
             string _body_default_string = "{}";
             JObject _body_default = JObject.Parse(_body_default_string);
             _body_default.Merge(_body);
@@ -127,11 +134,13 @@ namespace KSYUN.SDK.KCM
             _body.Merge(_body_fixed);
 
             var _bodyModel = new CreateCertificatebodyModel();
-            var _bodyvalid = _bodyModel.validtor(_body);
+            var _bodyvalid = _bodyModel.validtor(_body as JToken);
 
             if(_bodyvalid.status != true){
                throw new System.ArgumentException(_bodyvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -140,15 +149,16 @@ namespace KSYUN.SDK.KCM
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteCertificate(JObject _query )
+        public HttpClientResponse DeleteCertificate(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -159,11 +169,13 @@ namespace KSYUN.SDK.KCM
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteCertificatequeryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -171,15 +183,16 @@ namespace KSYUN.SDK.KCM
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifyCertificate(JObject _query )
+        public HttpClientResponse ModifyCertificate(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -190,11 +203,13 @@ namespace KSYUN.SDK.KCM
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifyCertificatequeryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 

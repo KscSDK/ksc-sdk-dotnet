@@ -17,7 +17,7 @@ namespace KSYUN.SDK.VPC.Model.CreateRoute.query
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"CreateRoute\"],\"default\":\"CreateRoute\"},\"Version\":{\"type\":\"string\",\"default\":\"2016-03-04\"},\"VpcId\":{\"type\":\"string\"},\"DestinationCidrBlock\":{\"type\":\"string\"},\"RouteType\":{\"type\":\"string\",\"default\":\"InternetGateway\"},\"TunnelId\":{\"type\":\"string\"},\"InstanceId\":{\"type\":\"string\"},\"VpcPeeringConnectionId\":{\"type\":\"string\"},\"DirectConnectGatewayId\":{\"type\":\"string\"},\"VpnTunnelId\":{\"type\":\"string\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

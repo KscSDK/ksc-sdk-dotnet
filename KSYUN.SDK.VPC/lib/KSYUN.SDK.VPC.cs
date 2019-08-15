@@ -137,15 +137,16 @@ namespace KSYUN.SDK.VPC
         }
 
 
-        public HttpClientResponse CreateVpc(JObject _query )
+        public HttpClientResponse CreateVpc(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -156,11 +157,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new CreateVpcqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -168,15 +171,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteVpc(JObject _query )
+        public HttpClientResponse DeleteVpc(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -187,11 +191,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteVpcqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -199,15 +205,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifyVpc(JObject _query )
+        public HttpClientResponse ModifyVpc(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -218,11 +225,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifyVpcqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -230,15 +239,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeVpcs(JObject _query )
+        public HttpClientResponse DescribeVpcs(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -249,11 +259,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeVpcsqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -261,15 +273,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse CreateSubnet(JObject _query )
+        public HttpClientResponse CreateSubnet(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -280,11 +293,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new CreateSubnetqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -292,15 +307,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteSubnet(JObject _query )
+        public HttpClientResponse DeleteSubnet(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -311,11 +327,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteSubnetqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -323,15 +341,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifySubnet(JObject _query )
+        public HttpClientResponse ModifySubnet(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -342,11 +361,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifySubnetqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -354,15 +375,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeSubnets(JObject _query )
+        public HttpClientResponse DescribeSubnets(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -373,11 +395,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeSubnetsqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -385,15 +409,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse AssociateNetworkAcl(JObject _query )
+        public HttpClientResponse AssociateNetworkAcl(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -404,11 +429,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new AssociateNetworkAclqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -416,15 +443,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DisassociateNetworkAcl(JObject _query )
+        public HttpClientResponse DisassociateNetworkAcl(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -435,11 +463,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DisassociateNetworkAclqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -447,15 +477,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeSubnetAvailableAddresses(JObject _query )
+        public HttpClientResponse DescribeSubnetAvailableAddresses(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -466,11 +497,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeSubnetAvailableAddressesqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -478,15 +511,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeSubnetAllocatedIpAddresses(JObject _query )
+        public HttpClientResponse DescribeSubnetAllocatedIpAddresses(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -497,11 +531,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeSubnetAllocatedIpAddressesqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -509,15 +545,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse CreateRoute(JObject _query )
+        public HttpClientResponse CreateRoute(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\",\"RouteType\":\"InternetGateway\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -528,11 +565,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new CreateRoutequeryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -540,15 +579,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteRoute(JObject _query )
+        public HttpClientResponse DeleteRoute(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -559,11 +599,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteRoutequeryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -571,15 +613,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeRoutes(JObject _query )
+        public HttpClientResponse DescribeRoutes(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -590,11 +633,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeRoutesqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -602,15 +647,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse CreateNetworkAcl(JObject _query )
+        public HttpClientResponse CreateNetworkAcl(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -621,11 +667,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new CreateNetworkAclqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -633,15 +681,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteNetworkAcl(JObject _query )
+        public HttpClientResponse DeleteNetworkAcl(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -652,11 +701,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteNetworkAclqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -664,15 +715,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifyNetworkAcl(JObject _query )
+        public HttpClientResponse ModifyNetworkAcl(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -683,11 +735,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifyNetworkAclqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -695,15 +749,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse CreateNetworkAclEntry(JObject _query )
+        public HttpClientResponse CreateNetworkAclEntry(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -714,11 +769,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new CreateNetworkAclEntryqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -726,15 +783,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteNetworkAclEntry(JObject _query )
+        public HttpClientResponse DeleteNetworkAclEntry(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -745,11 +803,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteNetworkAclEntryqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -757,15 +817,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifyNetworkAclEntry(JObject _query )
+        public HttpClientResponse ModifyNetworkAclEntry(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -776,11 +837,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifyNetworkAclEntryqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -788,15 +851,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeNetworkAcls(JObject _query )
+        public HttpClientResponse DescribeNetworkAcls(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -807,11 +871,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeNetworkAclsqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -819,15 +885,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse CreateSecurityGroup(JObject _query )
+        public HttpClientResponse CreateSecurityGroup(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\",\"SecurityGroupName\":\"Ksc_SecurityGroup\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -838,11 +905,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new CreateSecurityGroupqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -850,15 +919,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteSecurityGroup(JObject _query )
+        public HttpClientResponse DeleteSecurityGroup(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -869,11 +939,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteSecurityGroupqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -881,15 +953,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifySecurityGroup(JObject _query )
+        public HttpClientResponse ModifySecurityGroup(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -900,11 +973,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifySecurityGroupqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -912,15 +987,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse AuthorizeSecurityGroupEntry(JObject _query )
+        public HttpClientResponse AuthorizeSecurityGroupEntry(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -931,11 +1007,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new AuthorizeSecurityGroupEntryqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -943,15 +1021,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse RevokeSecurityGroupEntry(JObject _query )
+        public HttpClientResponse RevokeSecurityGroupEntry(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -962,11 +1041,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new RevokeSecurityGroupEntryqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -974,15 +1055,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifySecurityGroupEntry(JObject _query )
+        public HttpClientResponse ModifySecurityGroupEntry(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -993,11 +1075,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifySecurityGroupEntryqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1005,15 +1089,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeSecurityGroups(JObject _query )
+        public HttpClientResponse DescribeSecurityGroups(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1024,11 +1109,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeSecurityGroupsqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1036,15 +1123,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeInternetGateways(JObject _query )
+        public HttpClientResponse DescribeInternetGateways(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1055,11 +1143,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeInternetGatewaysqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1067,15 +1157,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeNetworkInterfaces(JObject _query )
+        public HttpClientResponse DescribeNetworkInterfaces(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1086,11 +1177,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeNetworkInterfacesqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1098,15 +1191,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse CreateNat(JObject _query )
+        public HttpClientResponse CreateNat(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\",\"NatName\":\"Ksc_Nat\",\"NatIpNumber\":1}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1117,11 +1211,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new CreateNatqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1129,15 +1225,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteNat(JObject _query )
+        public HttpClientResponse DeleteNat(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1148,11 +1245,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteNatqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1160,15 +1259,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifyNat(JObject _query )
+        public HttpClientResponse ModifyNat(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1179,11 +1279,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifyNatqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1191,15 +1293,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeNats(JObject _query )
+        public HttpClientResponse DescribeNats(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1210,11 +1313,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeNatsqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1222,15 +1327,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse AssociateNat(JObject _query )
+        public HttpClientResponse AssociateNat(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1241,11 +1347,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new AssociateNatqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1253,15 +1361,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DisassociateNat(JObject _query )
+        public HttpClientResponse DisassociateNat(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1272,11 +1381,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DisassociateNatqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1284,15 +1395,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse CreateVpcPeeringConnection(JObject _query )
+        public HttpClientResponse CreateVpcPeeringConnection(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1303,11 +1415,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new CreateVpcPeeringConnectionqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1315,15 +1429,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse AcceptVpcPeeringConnection(JObject _query )
+        public HttpClientResponse AcceptVpcPeeringConnection(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1334,11 +1449,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new AcceptVpcPeeringConnectionqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1346,15 +1463,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse RejectVpcPeeringConnection(JObject _query )
+        public HttpClientResponse RejectVpcPeeringConnection(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1365,11 +1483,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new RejectVpcPeeringConnectionqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1377,15 +1497,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteVpcPeeringConnection(JObject _query )
+        public HttpClientResponse DeleteVpcPeeringConnection(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1396,11 +1517,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteVpcPeeringConnectionqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1408,15 +1531,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifyVpcPeeringConnection(JObject _query )
+        public HttpClientResponse ModifyVpcPeeringConnection(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1427,11 +1551,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifyVpcPeeringConnectionqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1439,15 +1565,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeVpcPeeringConnections(JObject _query )
+        public HttpClientResponse DescribeVpcPeeringConnections(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1458,11 +1585,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeVpcPeeringConnectionsqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1470,15 +1599,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse AddNatIp(JObject _query )
+        public HttpClientResponse AddNatIp(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1489,11 +1619,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new AddNatIpqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1501,15 +1633,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteNatIp(JObject _query )
+        public HttpClientResponse DeleteNatIp(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1520,11 +1653,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteNatIpqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1532,15 +1667,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse AssociateDirectConnectGateway(JObject _query )
+        public HttpClientResponse AssociateDirectConnectGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1551,11 +1687,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new AssociateDirectConnectGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1563,15 +1701,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DisassociateDirectConnectGateway(JObject _query )
+        public HttpClientResponse DisassociateDirectConnectGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1582,11 +1721,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DisassociateDirectConnectGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1594,15 +1735,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse AssociateVpnGateway(JObject _query )
+        public HttpClientResponse AssociateVpnGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1613,11 +1755,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new AssociateVpnGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1625,15 +1769,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DisassociateVpnGateway(JObject _query )
+        public HttpClientResponse DisassociateVpnGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1644,11 +1789,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DisassociateVpnGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1656,15 +1803,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeAvailabilityZones(JObject _query )
+        public HttpClientResponse DescribeAvailabilityZones(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1675,11 +1823,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeAvailabilityZonesqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1687,15 +1837,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeDirectConnects(JObject _query )
+        public HttpClientResponse DescribeDirectConnects(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1706,11 +1857,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeDirectConnectsqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1718,15 +1871,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse CreateDirectConnectInterface(JObject _query )
+        public HttpClientResponse CreateDirectConnectInterface(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1737,11 +1891,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new CreateDirectConnectInterfacequeryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1749,15 +1905,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifyDirectConnectInterface(JObject _query )
+        public HttpClientResponse ModifyDirectConnectInterface(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1768,11 +1925,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifyDirectConnectInterfacequeryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1780,15 +1939,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteDirectConnectInterface(JObject _query )
+        public HttpClientResponse DeleteDirectConnectInterface(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1799,11 +1959,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteDirectConnectInterfacequeryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1811,15 +1973,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeDirectConnectInterfaces(JObject _query )
+        public HttpClientResponse DescribeDirectConnectInterfaces(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1830,11 +1993,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeDirectConnectInterfacesqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1842,15 +2007,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse CreateDirectConnectGateway(JObject _query )
+        public HttpClientResponse CreateDirectConnectGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1861,11 +2027,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new CreateDirectConnectGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1873,15 +2041,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifyDirectConnectGateway(JObject _query )
+        public HttpClientResponse ModifyDirectConnectGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1892,11 +2061,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifyDirectConnectGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1904,15 +2075,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteDirectConnectGateway(JObject _query )
+        public HttpClientResponse DeleteDirectConnectGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1923,11 +2095,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteDirectConnectGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1935,15 +2109,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeDirectConnectGateways(JObject _query )
+        public HttpClientResponse DescribeDirectConnectGateways(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1954,11 +2129,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeDirectConnectGatewaysqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1966,15 +2143,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse AttachDirectConnectGateway(JObject _query )
+        public HttpClientResponse AttachDirectConnectGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -1985,11 +2163,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new AttachDirectConnectGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -1997,15 +2177,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DetachDirectConnectGateway(JObject _query )
+        public HttpClientResponse DetachDirectConnectGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2016,11 +2197,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DetachDirectConnectGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2028,15 +2211,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse CreateVpnGateway(JObject _query )
+        public HttpClientResponse CreateVpnGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\",\"VpnGatewayName\":\"Ksc_Vpn\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2047,11 +2231,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new CreateVpnGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2059,15 +2245,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifyVpnGateway(JObject _query )
+        public HttpClientResponse ModifyVpnGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2078,11 +2265,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifyVpnGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2090,15 +2279,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteVpnGateway(JObject _query )
+        public HttpClientResponse DeleteVpnGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2109,11 +2299,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteVpnGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2121,15 +2313,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeVpnGateways(JObject _query )
+        public HttpClientResponse DescribeVpnGateways(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2140,11 +2333,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeVpnGatewaysqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2152,29 +2347,33 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse CreateVpnTunnel(JObject _query , JObject _body )
+        public HttpClientResponse CreateVpnTunnel(JObject _query,JObject _body)
         {
             string _url = baseurl + "/";
             string _method = "post";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
 
-            string _query_default_string = "{\"version\":\"2016-03-04\"}";
+            
+            string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
             _query = _query_default;
 
-            string _query_fixed_string = "{\"action\":\"CreateVpnTunnel\"}";
+            string _query_fixed_string = "{\"Action\":\"CreateVpnTunnel\"}";
             JObject _query_fixed = JObject.Parse(_query_fixed_string);
             _query.Merge(_query_fixed);
 
             var _queryModel = new CreateVpnTunnelqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
+            
             string _body_default_string = "{\"VpnTunnelName\":\"Ksc_vpn_tunnel\",\"IkeAuthenAlgorithm\":\"md5\",\"IkeDHGroup\":1,\"IkeEncryAlgorithm\":\"aes\",\"IpsecEncryAlgorithm\":\"esp-aes\",\"IpsecAuthenAlgorithm\":\"esp-sha-hmac\"}";
             JObject _body_default = JObject.Parse(_body_default_string);
             _body_default.Merge(_body);
@@ -2185,11 +2384,13 @@ namespace KSYUN.SDK.VPC
             _body.Merge(_body_fixed);
 
             var _bodyModel = new CreateVpnTunnelbodyModel();
-            var _bodyvalid = _bodyModel.validtor(_body);
+            var _bodyvalid = _bodyModel.validtor(_body as JToken);
 
             if(_bodyvalid.status != true){
                throw new System.ArgumentException(_bodyvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2198,15 +2399,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifyVpnTunnel(JObject _query )
+        public HttpClientResponse ModifyVpnTunnel(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2217,11 +2419,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifyVpnTunnelqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2229,15 +2433,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteVpnTunnel(JObject _query )
+        public HttpClientResponse DeleteVpnTunnel(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2248,11 +2453,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteVpnTunnelqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2260,15 +2467,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeVpnTunnels(JObject _query )
+        public HttpClientResponse DescribeVpnTunnels(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2279,11 +2487,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeVpnTunnelsqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2291,15 +2501,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse CreateCustomerGateway(JObject _query )
+        public HttpClientResponse CreateCustomerGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2310,11 +2521,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new CreateCustomerGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2322,15 +2535,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifyCustomerGateway(JObject _query )
+        public HttpClientResponse ModifyCustomerGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2341,11 +2555,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifyCustomerGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2353,15 +2569,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DeleteCustomerGateway(JObject _query )
+        public HttpClientResponse DeleteCustomerGateway(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2372,11 +2589,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DeleteCustomerGatewayqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2384,15 +2603,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeCustomerGateways(JObject _query )
+        public HttpClientResponse DescribeCustomerGateways(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2403,11 +2623,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeCustomerGatewaysqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2415,15 +2637,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DescribeTunnels(JObject _query )
+        public HttpClientResponse DescribeTunnels(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2434,11 +2657,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DescribeTunnelsqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2446,15 +2671,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse ModifyTunnel(JObject _query )
+        public HttpClientResponse ModifyTunnel(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2465,11 +2691,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new ModifyTunnelqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2477,15 +2705,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse AssociateSubnet(JObject _query )
+        public HttpClientResponse AssociateSubnet(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2496,11 +2725,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new AssociateSubnetqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2508,15 +2739,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DisassociateSubnet(JObject _query )
+        public HttpClientResponse DisassociateSubnet(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2527,11 +2759,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DisassociateSubnetqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2539,15 +2773,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse AssociateRemoteCidr(JObject _query )
+        public HttpClientResponse AssociateRemoteCidr(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2558,11 +2793,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new AssociateRemoteCidrqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 
@@ -2570,15 +2807,16 @@ namespace KSYUN.SDK.VPC
             _instance.setAwsAuthType(ak, sk, server, region);
             return _instance.request();
         }
-        public HttpClientResponse DisassociateRemoteCidr(JObject _query )
+        public HttpClientResponse DisassociateRemoteCidr(JObject _query)
         {
             string _url = baseurl + "/";
             string _method = "get";
-            JObject _params = new JObject();
-            JObject _headers = new JObject();
-            JObject _cookie = new JObject();
-            JObject _body = new JObject();
+            var _params = new JObject();
+            var _headers = new JObject();
+            var _cookie = new JObject();
+            JValue _body = new JValue(""); 
 
+            
             string _query_default_string = "{\"Version\":\"2016-03-04\"}";
             JObject _query_default = JObject.Parse(_query_default_string);
             _query_default.Merge(_query);
@@ -2589,11 +2827,13 @@ namespace KSYUN.SDK.VPC
             _query.Merge(_query_fixed);
 
             var _queryModel = new DisassociateRemoteCidrqueryModel();
-            var _queryvalid = _queryModel.validtor(_query);
+            var _queryvalid = _queryModel.validtor(_query as JToken);
 
             if(_queryvalid.status != true){
                throw new System.ArgumentException(_queryvalid.message); 
             }
+
+
 
             HttpClientCore _instance = new HttpClientCore(_url, _method, _headers, _params, _query, _body);
 

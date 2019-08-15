@@ -17,7 +17,7 @@ namespace KSYUN.SDK.VPC.Model.CreateNat.query
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"CreateNat\"],\"default\":\"CreateNat\"},\"Version\":{\"type\":\"string\",\"default\":\"2016-03-04\"},\"VpcId\":{\"type\":\"string\"},\"NatName\":{\"type\":\"string\",\"default\":\"Ksc_Nat\"},\"NatMode\":{\"type\":\"string\"},\"NatType\":{\"type\":\"string\"},\"NatIpNumber\":{\"type\":\"integer\",\"default\":1},\"BandWidth\":{\"type\":\"integer\"},\"ChargeType\":{\"type\":\"string\"},\"PurchaseTime\":{\"type\":\"integer\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

@@ -17,7 +17,7 @@ namespace KSYUN.SDK.VPC.Model.DescribeSubnets.query
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"DescribeSubnets\"],\"default\":\"DescribeSubnets\"},\"Version\":{\"type\":\"string\",\"default\":\"2016-03-04\"},\"SubnetId\":{\"type\":\"string\"},\"Filter\":{\"type\":\"string\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

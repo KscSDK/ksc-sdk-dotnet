@@ -17,7 +17,7 @@ namespace KSYUN.SDK.VPC.Model.ModifyVpnTunnel.query
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"ModifyVpnTunnel\"],\"default\":\"ModifyVpnTunnel\"},\"Version\":{\"type\":\"string\",\"default\":\"2016-03-04\"},\"VpnTunnelId\":{\"type\":\"string\"},\"VpnTunnelName\":{\"type\":\"string\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

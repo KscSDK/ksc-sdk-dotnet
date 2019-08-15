@@ -17,7 +17,7 @@ namespace KSYUN.SDK.KCM.Model.CreateCertificate.body
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"CertificateName\":{\"type\":\"string\"},\"PrivateKey\":{\"type\":\"string\"},\"PublicKey\":{\"type\":\"string\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

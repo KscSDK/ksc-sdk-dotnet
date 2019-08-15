@@ -17,7 +17,7 @@ namespace KSYUN.SDK.VPC.Model.DescribeVpcPeeringConnections.query
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"DescribeVpcPeeringConnections\"],\"default\":\"DescribeVpcPeeringConnections\"},\"Version\":{\"type\":\"string\",\"default\":\"2016-03-04\"},\"VpcPeeringConnectionId\":{\"type\":\"string\"},\"Filter\":{\"type\":\"string\"},\"MaxResults\":{\"type\":\"integer\"},\"NextToken\":{\"type\":\"string\"},\"ProjectId\":{\"type\":\"string\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

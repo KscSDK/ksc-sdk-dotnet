@@ -17,7 +17,7 @@ namespace KSYUN.SDK.VPC.Model.CreateVpnGateway.query
             JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"CreateVpnGateway\"],\"default\":\"CreateVpnGateway\"},\"Version\":{\"type\":\"string\",\"default\":\"2016-03-04\"},\"VpnGatewayName\":{\"type\":\"string\",\"default\":\"Ksc_Vpn\"},\"BandWidth\":{\"type\":\"integer\"},\"VpcId\":{\"type\":\"string\"},\"ChargeType\":{\"type\":\"string\"},\"PurchaseTime\":{\"type\":\"integer\"},\"ProjectId\":{\"type\":\"string\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
-        public JSONValidStruct validtor(JObject data)
+        public JSONValidStruct validtor(JToken data)
         {
             JSONValidStruct _JSONValidStruct = new JSONValidStruct();
 

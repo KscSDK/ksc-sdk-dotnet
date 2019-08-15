@@ -14,7 +14,7 @@ namespace KSYUN.SDK.SMS.Model.SendSms.query
         public SendSmsqueryModel()
         {
             JsonSerializer serializer = new JsonSerializer();
-            JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"action\":{\"type\":\"string\",\"enum\":[\"SendSms\"],\"default\":\"SendSms\"},\"version\":{\"type\":\"string\",\"default\":\"2019-05-01\"}}}");
+            JsonValue json = JsonValue.Parse("{\"type\":\"object\",\"properties\":{\"Action\":{\"type\":\"string\",\"enum\":[\"SendSms\"],\"default\":\"SendSms\"},\"Version\":{\"type\":\"string\",\"default\":\"2019-05-01\"}}}");
             _schema = serializer.Deserialize<JsonSchema>(json);
         }
         public JSONValidStruct validtor(JToken data)
